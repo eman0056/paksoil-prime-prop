@@ -9,22 +9,28 @@ import heroImg from "@/assets/hero-villa.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Paksoil.com — Find, Sell & Manage Property Across Pakistan" },
-      { name: "description", content: "Paksoil.com helps customers with property sales, purchases, marketing, builder services, maintenance and home services across Pakistan." },
-      { property: "og:title", content: "Paksoil.com — Real Estate & Property Services" },
-      { property: "og:description", content: "Trusted real estate solutions across Pakistan — buy, sell, build and maintain with Paksoil.com." },
+      { title: "PAKSOILS PVT LTD — Real estate development and property maintenance in Pakistan" },
+      {
+        name: "description",
+        content: "PAKSOILS PVT LTD operates through Paksoils.com and Paksoils Developers with real estate development, property management and facility maintenance services.",
+      },
+      { property: "og:title", content: "PAKSOILS PVT LTD — Real estate development and property maintenance" },
+      {
+        property: "og:description",
+        content: "Corporate umbrella offering Peace Valley residential plots, facility maintenance, electrical services, paint works, structural repairs and B2B advertising support.",
+      },
     ],
   }),
   component: Home,
 });
 
 const services = [
-  { icon: TrendingUp, title: "Property Sales", desc: "Sell residential & commercial property with expert pricing and qualified buyer outreach." },
-  { icon: HomeIcon, title: "Property Purchase", desc: "Find verified houses, plots, apartments and commercial spaces matched to your budget." },
-  { icon: Megaphone, title: "Property Marketing", desc: "Online listings, digital campaigns and lead generation that move properties faster." },
-  { icon: Building2, title: "Builder Services", desc: "Trusted construction partners for residential and commercial projects, end to end." },
-  { icon: Wrench, title: "Maintenance", desc: "Repairs, renovations and property management — keep your asset in top condition." },
-  { icon: Hammer, title: "Home Services", desc: "Cleaning, inspection, improvement and care services for your home." },
+  { icon: TrendingUp, title: "Broker Opinion of Valuation (BOV)", desc: "Comparative market analyses for property liquidation." },
+  { icon: HomeIcon, title: "Vacant Asset Safeguarding", desc: "Custodial oversight, securing and managing structures while properties sit vacant." },
+  { icon: Megaphone, title: "Tenancy Administration", desc: "Commercial collection of monthly rental yields and ongoing tenant relations." },
+  { icon: Building2, title: "Infrastructural Electrical Division", desc: "Full-scale wiring services, load calculations and technical fault resolution across domestic, retail, commercial and industrial sectors." },
+  { icon: Wrench, title: "Paint with Paksoils", desc: "Complete industrial and residential face-lifts, exterior weather-sheathing and interior paint finish management." },
+  { icon: Hammer, title: "Civic & Structural Maintenance", desc: "General contracting covering structural repair recommendations and landscape or lawn preservation." },
 ];
 
 function Home() {
@@ -35,24 +41,23 @@ function Home() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroImg} alt="" width={1600} height={1024} className="h-full w-full object-cover" />
+          <img src={heroImg} alt="Premium villa with landscaped grounds" width={1600} height={1024} className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-          <div className="absolute inset-0 bg-secondary/55" />
+          <div className="absolute inset-0 bg-secondary/60" />
         </div>
-        <div className="mx-auto max-w-7xl px-5 pt-20 pb-28 text-secondary-foreground md:pt-28 md:pb-36">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)] backdrop-blur">
-            <Sparkles size={12} /> Pakistan's trusted property partner
+        <div className="mx-auto max-w-7xl px-5 pt-20 pb-28 text-secondary-foreground sm:px-6 md:pt-28 md:pb-36 lg:px-8">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)] backdrop-blur">
+            <Sparkles size={12} /> PAKSOILS PVT LTD
           </span>
           <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Find, Sell & Manage <span className="text-[var(--gold)]">Property</span> Across Pakistan
+            Real estate development and <span className="text-[var(--gold)]">property maintenance</span> in Pakistan
           </h1>
-          <p className="mt-5 max-w-2xl text-base text-secondary-foreground/85 sm:text-lg">
-            Paksoil.com helps customers with property sales, purchases, marketing,
-            builder services, maintenance and home services through trusted real estate solutions.
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-secondary-foreground/85 sm:text-lg">
+            A structured corporate umbrella operating through Paksoils.com and Paksoils Developers with residential plot development, facility maintenance and B2B advertising services.
           </p>
 
           {/* SEARCH */}
-          <div className="mt-10 rounded-2xl border border-white/10 bg-background/95 p-4 shadow-[var(--shadow-elegant)] backdrop-blur md:p-5">
+          <div className="mt-10 rounded-[1.75rem] border border-white/10 bg-background/95 p-4 shadow-[var(--shadow-elegant)] backdrop-blur md:p-5">
             <div className="mb-3 flex gap-1">
               {(["Buy", "Sell"] as const).map((t, i) => (
                 <button
@@ -94,9 +99,9 @@ function Home() {
 
           <div className="mt-10 grid max-w-2xl grid-cols-3 gap-6 text-secondary-foreground/85">
             {[
-              ["12K+", "Listed Properties"],
-              ["6K+", "Happy Customers"],
-              ["25+", "Cities Covered"],
+              ["PAKSOILS PVT LTD", "Corporate umbrella"],
+              ["Peace Valley", "Islamabad residential plots"],
+              ["Paksoils.org", "Free advertising initiative"],
             ].map(([n, l]) => (
               <div key={l}>
                 <p className="font-display text-3xl font-bold text-[var(--gold)]">{n}</p>
@@ -108,7 +113,7 @@ function Home() {
       </section>
 
       {/* FEATURED PROPERTIES */}
-      <section className="mx-auto max-w-7xl px-5 py-20">
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionHeader
             eyebrow="Featured Listings"
@@ -129,12 +134,12 @@ function Home() {
 
       {/* SERVICES */}
       <section className="bg-muted/50 py-20">
-        <div className="mx-auto max-w-7xl px-5">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <SectionHeader
             center
             eyebrow="What We Do"
-            title="Complete real estate & home services"
-            subtitle="From listing your property to maintaining it for decades, Paksoil.com covers every step."
+            title="Real estate development and maintenance"
+            subtitle="From listing your property to maintaining it for decades, PAKSOILS PVT LTD supports your asset lifecycle."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
@@ -153,21 +158,20 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE */}
-      <section className="mx-auto max-w-7xl px-5 py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeader
-              eyebrow="Why Paksoil.com"
-              title="Trusted by thousands of Pakistani property owners"
-              subtitle="We combine local market expertise with transparent dealing and a customer-first approach — so you make every property decision with confidence."
+              eyebrow="Corporate Operations"
+              title="Real estate development, property management and technical trades"
+              subtitle="PAKSOILS PVT LTD operates under a structured corporate umbrella with flagship Peace Valley plots and facility maintenance divisions."
             />
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
               {[
-                { i: ShieldCheck, t: "Verified Listings", d: "Every property is screened before going live." },
-                { i: Award, t: "Expert Advisors", d: "Local agents with deep neighborhood insight." },
-                { i: Headphones, t: "End-to-End Support", d: "From paperwork to possession, we're there." },
-                { i: TrendingUp, t: "Fair Market Pricing", d: "Data-driven valuations you can trust." },
+                { i: ShieldCheck, t: "Paksoils.com", d: "Free advertising initiative for registered network members on paksoils.org." },
+                { i: Award, t: "Peace Valley", d: "Residential subdivision plots offered in 3.5 Marla to 1 Kanal sizes." },
+                { i: Headphones, t: "Executive Leadership", d: "Nazar Muhammad Baloch is Chief Executive Officer (CEO)." },
+                { i: TrendingUp, t: "Headquarters", d: "Office No. #223, 3rd Floor, M Dubai Tower, Khanna Bridge, Lehtrar Road, Islamabad." },
               ].map((f) => (
                 <div key={f.t} className="flex gap-3">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
@@ -181,50 +185,15 @@ function Home() {
               ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-[var(--shadow-elegant)]">
-              <img src={heroImg} alt="Premium villa" width={1600} height={1024} loading="lazy" className="h-full w-full object-cover" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-elegant)] sm:block">
-              <p className="font-display text-3xl font-bold text-primary">98%</p>
-              <p className="text-xs uppercase tracking-wider text-muted-foreground">Customer Satisfaction</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TRUST / TESTIMONIALS */}
-      <section className="bg-muted/50 py-20">
-        <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader
-            center
-            eyebrow="Customer Trust"
-            title="What our clients say about Paksoil.com"
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              { n: "Adeel R.", c: "Lahore", q: "Sold my DHA house above asking price in under three weeks. The marketing was on another level." },
-              { n: "Sana M.", c: "Islamabad", q: "Found the perfect F-11 apartment for my family. The advisor was honest and patient throughout." },
-              { n: "Hamza K.", c: "Karachi", q: "Their builder team renovated our office plaza beautifully — on time and on budget." },
-            ].map((t) => (
-              <figure key={t.n} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]">
-                <div className="flex gap-0.5 text-[var(--gold)]">
-                  {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
-                </div>
-                <blockquote className="mt-3 text-sm leading-relaxed text-foreground">"{t.q}"</blockquote>
-                <figcaption className="mt-5 text-sm">
-                  <span className="font-semibold text-foreground">{t.n}</span>
-                  <span className="text-muted-foreground"> · {t.c}</span>
-                </figcaption>
-              </figure>
-            ))}
+          <div className="relative overflow-hidden rounded-3xl shadow-[var(--shadow-elegant)]">
+            <img src={heroImg} alt="Peace Valley residential development" width={1600} height={1024} loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-5 py-20">
-        <div className="relative overflow-hidden rounded-3xl bg-secondary p-10 text-secondary-foreground md:p-16">
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] bg-secondary p-10 text-secondary-foreground md:p-16">
           <div
             className="absolute inset-0 opacity-30"
             style={{ background: "radial-gradient(circle at 80% 50%, oklch(0.55 0.13 155 / .7), transparent 55%)" }}
@@ -233,7 +202,7 @@ function Home() {
             <div>
               <h2 className="font-display text-3xl font-bold sm:text-4xl">Ready to list, buy or build?</h2>
               <p className="mt-3 max-w-xl text-secondary-foreground/80">
-                Talk to a Paksoil.com advisor today and get tailored recommendations for your property goals.
+                Talk to a PAKSOILS PVT LTD advisor today and get tailored recommendations for your property goals.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">

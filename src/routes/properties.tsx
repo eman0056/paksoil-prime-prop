@@ -9,10 +9,10 @@ import { properties, cities, propertyTypes } from "@/data/properties";
 export const Route = createFileRoute("/properties")({
   head: () => ({
     meta: [
-      { title: "Properties for Sale in Pakistan — Paksoil.com" },
-      { name: "description", content: "Browse verified houses, apartments, plots and commercial properties for sale across Pakistan with Paksoil.com." },
-      { property: "og:title", content: "Browse Properties — Paksoil.com" },
-      { property: "og:description", content: "Houses, apartments, plots and commercial property across Lahore, Karachi, Islamabad and more." },
+      { title: "Properties for Sale — PAKSOILS PVT LTD" },
+      { name: "description", content: "Browse Peace Valley residential plots in Islamabad with support from PAKSOILS PVT LTD." },
+      { property: "og:title", content: "Browse Properties — PAKSOILS PVT LTD" },
+      { property: "og:description", content: "Explore Peace Valley plots from 3.5 Marla to 1 Kanal with PAKSOILS PVT LTD." },
     ],
   }),
   component: PropertiesPage,
@@ -43,10 +43,10 @@ function PropertiesPage() {
       <PageHero
         eyebrow="Properties"
         title="Browse properties across Pakistan"
-        subtitle="Filter by city, area, type and budget to find the perfect match."
+        subtitle="Browse available Peace Valley plots in Islamabad and filter by area, layout and budget."
       />
 
-      <section className="mx-auto max-w-7xl px-5 py-12">
+      <section className="mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[300px_1fr]">
           {/* Sidebar */}
           <aside className="h-fit rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] lg:sticky lg:top-24">

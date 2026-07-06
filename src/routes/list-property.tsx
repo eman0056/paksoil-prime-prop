@@ -8,10 +8,10 @@ import { cities, propertyTypes } from "@/data/properties";
 export const Route = createFileRoute("/list-property")({
   head: () => ({
     meta: [
-      { title: "List Your Property in Pakistan — Paksoil.com" },
-      { name: "description", content: "Submit your property details and our team will contact you to help sell, market or maintain your property." },
-      { property: "og:title", content: "List Your Property — Paksoil.com" },
-      { property: "og:description", content: "Sell, market or maintain your property with Paksoil.com." },
+      { title: "List Your Property — PAKSOILS PVT LTD" },
+      { name: "description", content: "Submit your property details and our team will contact you to help sell, market or maintain your asset." },
+      { property: "og:title", content: "List Your Property — PAKSOILS PVT LTD" },
+      { property: "og:description", content: "Submit your property details for brokerage, marketing or maintenance support from PAKSOILS PVT LTD." },
     ],
   }),
   component: ListProperty,
@@ -25,10 +25,10 @@ function ListProperty() {
       <PageHero
         eyebrow="List Your Property"
         title="Sell, market or maintain your property with confidence"
-        subtitle="Share your property details and our advisor will reach out within one business day."
+        subtitle="Submit your property details and our team will contact you to support your listing, marketing or maintenance needs."
       />
 
-      <section className="mx-auto max-w-4xl px-5 py-16">
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:px-6 lg:px-8">
         {sent ? (
           <div className="rounded-2xl border border-primary/30 bg-primary/5 p-10 text-center shadow-[var(--shadow-card)]">
             <CheckCircle2 size={48} className="mx-auto text-primary" />

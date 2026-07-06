@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { MapPin, BedDouble, Bath, Maximize, Tag, CheckCircle2, MessageCircle, Phone, Mail, Send } from "lucide-react";
+import { MapPin, BedDouble, Bath, Maximize, Tag, CheckCircle2, Phone, Send } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { PropertyCard } from "@/components/site/PropertyCard";
 import { properties } from "@/data/properties";
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/properties/$id")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.property.title} — ${loaderData.property.area}, ${loaderData.property.city} | Paksoil.com` },
+          { title: `${loaderData.property.title} — ${loaderData.property.area}, ${loaderData.property.city} | PAKSOILS PVT LTD` },
           { name: "description", content: loaderData.property.description },
           { property: "og:title", content: loaderData.property.title },
           { property: "og:description", content: loaderData.property.description },
@@ -49,7 +49,7 @@ function PropertyDetail() {
 
   return (
     <SiteLayout>
-      <section className="mx-auto max-w-7xl px-5 pt-10">
+      <section className="mx-auto max-w-7xl px-5 pt-10 sm:px-6 lg:px-8">
         <Link to="/properties" className="text-xs font-semibold uppercase tracking-wider text-primary hover:underline">
           ← Back to properties
         </Link>
@@ -97,13 +97,8 @@ function PropertyDetail() {
               <h2 className="font-display text-2xl font-bold text-foreground">Overview</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">{p.description}</p>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                Located in {p.area}, {p.city}, this {p.type.toLowerCase()} offers excellent access to schools,
-                markets, hospitals and main commercial hubs. The neighborhood is well-developed with paved roads,
-                landscaped greenbelts and round-the-clock security.
+                This listing is a residential plot located in {p.area}, {p.city}, marketed by PAKSOILS PVT LTD.
               </p>
-            </div>
-
-            <div className="mt-8">
               <h2 className="font-display text-2xl font-bold text-foreground">Features & Amenities</h2>
               <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                 {p.features.map((f: string) => (
@@ -140,27 +135,20 @@ function PropertyDetail() {
             )}
 
             <div className="mt-5 grid grid-cols-2 gap-2">
-              <a href="tel:+920000000000" className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-xs font-semibold text-foreground hover:bg-muted">
+              <a href="tel:+923227864673" className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-xs font-semibold text-foreground hover:bg-muted">
                 <Phone size={14} /> Call
               </a>
-              <a
-                href={`https://wa.me/92000000000?text=${encodeURIComponent(`Hello Paksoil, I'm interested in ${p.title} (${p.area}, ${p.city}).`)}`}
-                target="_blank" rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-md bg-[oklch(0.65_0.16_150)] py-2.5 text-xs font-semibold text-white"
-              >
-                <MessageCircle size={14} /> WhatsApp
+              <a href="tel:+923217864673" className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-xs font-semibold text-foreground hover:bg-muted">
+                <Phone size={14} /> Call Alternate
               </a>
             </div>
-            <p className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <Mail size={12} /> info@paksoil.com
-            </p>
           </aside>
         </div>
       </section>
 
       {/* SIMILAR */}
       {similar.length > 0 && (
-        <section className="mx-auto max-w-7xl px-5 py-20">
+        <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">Similar properties</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {similar.map((s) => <PropertyCard key={s.id} p={s} />)}

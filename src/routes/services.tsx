@@ -6,22 +6,58 @@ import { PageHero } from "@/components/site/PageHero";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Real Estate & Property Services in Pakistan — Paksoil.com" },
-      { name: "description", content: "Property sales, purchase, marketing, builder services, maintenance and home services — Paksoil.com is your full-service real estate partner." },
-      { property: "og:title", content: "Our Services — Paksoil.com" },
-      { property: "og:description", content: "Full-service real estate, builder and home services across Pakistan." },
+      { title: "Services — PAKSOILS PVT LTD" },
+      {
+        name: "description",
+        content: "PAKSOILS PVT LTD offers brokerage, asset management, electrical and technical trades, surface finishes, structural maintenance, and B2B advertising support.",
+      },
+      { property: "og:title", content: "Services — PAKSOILS PVT LTD" },
+      {
+        property: "og:description",
+        content: "Real estate asset management, facility maintenance and member advertising services from PAKSOILS PVT LTD.",
+      },
     ],
   }),
   component: ServicesPage,
 });
 
 const services = [
-  { icon: TrendingUp, title: "Property Sales", desc: "Helping customers sell residential and commercial properties professionally with the right pricing strategy and buyer outreach.", points: ["Market-based valuation", "Professional photography", "Qualified buyer leads"] },
-  { icon: Home, title: "Property Purchase", desc: "Helping buyers find suitable houses, plots, apartments and commercial properties matched to budget and lifestyle.", points: ["Verified listings", "Site visits arranged", "Negotiation support"] },
-  { icon: Megaphone, title: "Property Marketing", desc: "Marketing properties through online listings, digital campaigns, and structured lead generation.", points: ["Premium portal listings", "Social media campaigns", "Lead qualification"] },
-  { icon: Building2, title: "Builder Services", desc: "Connecting clients with trusted construction and builder partners for residential and commercial projects.", points: ["Turnkey construction", "Architectural design", "Project management"] },
-  { icon: Wrench, title: "Maintenance Services", desc: "Property repair, maintenance, renovation, and management support for long-term asset value.", points: ["Routine maintenance", "Renovation projects", "Tenant management"] },
-  { icon: Hammer, title: "Home Services", desc: "Home improvement, repair, cleaning, inspection, and general property care services across Pakistan.", points: ["Deep cleaning", "Repair & handyman", "Property inspection"] },
+  {
+    icon: TrendingUp,
+    title: "Broker Opinion of Valuation (BOV)",
+    desc: "Comparative market analyses for property liquidation.",
+    points: ["Property valuation reports", "Market comparison data", "Asset liquidation guidance"],
+  },
+  {
+    icon: Home,
+    title: "Vacant Asset Safeguarding",
+    desc: "Custodial oversight, securing and managing structures while properties sit vacant.",
+    points: ["Site inspections", "Interim security", "Routine condition checks"],
+  },
+  {
+    icon: Megaphone,
+    title: "Tenancy Administration",
+    desc: "Commercial collection of monthly rental yields and ongoing tenant relations.",
+    points: ["Rent collection", "Tenant communication", "Lease tracking"],
+  },
+  {
+    icon: Building2,
+    title: "Infrastructural Electrical Division",
+    desc: "Full-scale wiring services, load calculations and technical fault resolution across domestic, retail, commercial and industrial sectors.",
+    points: ["Full electrical fit-outs", "Safety testing", "Load planning"],
+  },
+  {
+    icon: Wrench,
+    title: "Paint with Paksoils",
+    desc: "Complete industrial and residential face-lifts, exterior weather-sheathing and interior paint finish management.",
+    points: ["Surface preparation", "Exterior coatings", "Interior finishing"],
+  },
+  {
+    icon: Hammer,
+    title: "Civic & Structural Maintenance",
+    desc: "General contracting coverage for structural repair recommendations and routine landscape or lawn preservation.",
+    points: ["Routine maintenance", "Structural patching", "Grounds upkeep"],
+  },
 ];
 
 function ServicesPage() {
@@ -29,11 +65,11 @@ function ServicesPage() {
     <SiteLayout>
       <PageHero
         eyebrow="Our Services"
-        title="Full-service real estate, builder & home solutions"
-        subtitle="Everything you need to buy, sell, build, market and maintain property — under one trusted roof."
+        title="Brokerage, facility maintenance and technical trades"
+        subtitle="PAKSOILS PVT LTD delivers real estate asset management, maintenance and B2B media support through its corporate divisions."
       />
 
-      <section className="mx-auto max-w-7xl px-5 py-16">
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <article key={s.title} className="group flex flex-col rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
@@ -58,12 +94,12 @@ function ServicesPage() {
       </section>
 
       <section className="bg-muted/50 py-20">
-        <div className="mx-auto max-w-5xl px-5 text-center">
+        <div className="mx-auto max-w-5xl px-5 text-center sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Need help with a specific property?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Tell us what you're looking for and a Paksoil.com advisor will get back to you within one business day.
+            Tell us what you're looking for and a PAKSOILS PVT LTD advisor will get back to you within one business day.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link to="/list-property" className="rounded-lg bg-[image:var(--gradient-brand)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md">List Your Property</Link>

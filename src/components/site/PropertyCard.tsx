@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, BedDouble, Bath, Maximize, MessageCircle } from "lucide-react";
+import { MapPin, BedDouble, Bath, Maximize, MessageCircle, Phone } from "lucide-react";
 import type { Property } from "@/data/properties";
 
 export function PropertyCard({ p }: { p: Property }) {
@@ -44,13 +44,11 @@ export function PropertyCard({ p }: { p: Property }) {
             View Details
           </Link>
           <a
-            href={`https://wa.me/92000000000?text=${encodeURIComponent(`Hello Paksoil, I'm interested in ${p.title} (${p.area}, ${p.city}).`)}`}
-            target="_blank"
-            rel="noreferrer"
+            href="tel:+923227864673"
             className="grid h-10 w-11 place-items-center rounded-md bg-[oklch(0.65_0.16_150)] text-white transition hover:opacity-90"
-            aria-label="WhatsApp"
+            aria-label="Call"
           >
-            <MessageCircle size={16} />
+            <Phone size={16} />
           </a>
         </div>
       </div>
