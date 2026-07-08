@@ -62,35 +62,35 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  /* Brand palette: deep green primary, navy secondary, gold accent */
-  --background: oklch(0.99 0.005 120);
-  --foreground: oklch(0.18 0.03 220);
+  --radius: 0.5rem;
+  /* Brand palette: Navy Trust — deep navy primary, editorial gold accent */
+  --background: oklch(0.995 0.003 250);
+  --foreground: oklch(0.16 0.03 250);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 220);
+  --card-foreground: oklch(0.16 0.03 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.03 220);
-  --primary: oklch(0.38 0.09 155);
-  --primary-foreground: oklch(0.985 0.005 120);
-  --primary-glow: oklch(0.55 0.13 155);
-  --secondary: oklch(0.24 0.06 250);
-  --secondary-foreground: oklch(0.985 0.005 120);
-  --muted: oklch(0.96 0.005 220);
-  --muted-foreground: oklch(0.45 0.02 230);
-  --accent: oklch(0.78 0.13 85);
-  --accent-foreground: oklch(0.22 0.04 250);
-  --gold: oklch(0.78 0.13 85);
+  --popover-foreground: oklch(0.16 0.03 250);
+  --primary: oklch(0.22 0.06 258);
+  --primary-foreground: oklch(0.985 0.003 250);
+  --primary-glow: oklch(0.34 0.09 258);
+  --secondary: oklch(0.16 0.04 258);
+  --secondary-foreground: oklch(0.985 0.003 250);
+  --muted: oklch(0.965 0.005 250);
+  --muted-foreground: oklch(0.48 0.02 250);
+  --accent: oklch(0.72 0.11 78);
+  --accent-foreground: oklch(0.16 0.04 258);
+  --gold: oklch(0.72 0.11 78);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.9 0.01 220);
-  --input: oklch(0.92 0.01 220);
-  --ring: oklch(0.38 0.09 155);
-  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.05 250 / 0.85), oklch(0.32 0.08 155 / 0.7));
+  --border: oklch(0.92 0.005 250);
+  --input: oklch(0.94 0.005 250);
+  --ring: oklch(0.22 0.06 258);
+  --gradient-hero: linear-gradient(180deg, oklch(0.14 0.04 258 / 0.55) 0%, oklch(0.10 0.03 258 / 0.85) 100%);
   --gradient-brand: linear-gradient(135deg, var(--primary), var(--primary-glow));
-  --shadow-card: 0 8px 30px -12px oklch(0.18 0.03 220 / 0.15);
-  --shadow-elegant: 0 20px 60px -20px oklch(0.18 0.03 220 / 0.25);
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --shadow-card: 0 1px 2px oklch(0.16 0.03 250 / 0.04), 0 8px 24px -12px oklch(0.16 0.03 250 / 0.10);
+  --shadow-elegant: 0 2px 4px oklch(0.16 0.03 250 / 0.06), 0 24px 48px -20px oklch(0.16 0.03 250 / 0.18);
+  --font-display: "Urbanist", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -156,7 +156,8 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    font-weight: 600;
   }
 
   ::selection {
