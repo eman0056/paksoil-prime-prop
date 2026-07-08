@@ -7,6 +7,12 @@ import prop6 from "@/assets/prop-6.jpg";
 import heroVilla from "@/assets/hero-villa.jpg";
 import paintService from "@/assets/rroUd.jpg";
 
+const img1 = prop6;
+const img2 = prop1;
+const img3 = paintService;
+const img4 = heroVilla;
+const img5 = prop4;
+
 export type Property = {
   id: string;
   title: string;
