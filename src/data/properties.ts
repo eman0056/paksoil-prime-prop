@@ -198,5 +198,30 @@ export const properties: Property[] = [
   },
 ];
 
-export const cities = ["All Cities", "Islamabad"];
-export const propertyTypes = ["All Types", "Plot"];
+export const cities = [
+  "All Cities",
+  "Islamabad",
+  "Rawalpindi",
+  "Lahore",
+  "Karachi",
+  "Peshawar",
+  "Multan",
+  "Faisalabad",
+  "Quetta",
+  "Gujranwala",
+  "Sialkot",
+  "Bahawalpur",
+];
+export const propertyTypes = [
+  "All Types",
+  "Plot",
+  "House",
+  "Villa",
+  "Apartment",
+  "Farmhouse",
+  "Commercial",
+  "Office",
+  "Shop",
+  "Warehouse",
+  "Agricultural Land",
+];
