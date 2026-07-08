@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Home, MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Home, MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -72,6 +72,7 @@ export function Footer() {
             <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-[var(--gold)]" /> Office No. #223, 3rd Floor, M Dubai Tower, Khanna Bridge, Lehtrar Road, Islamabad, Pakistan</li>
             <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-[var(--gold)]" /> +92 322 7864673</li>
             <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-[var(--gold)]" /> +92 321 7864673</li>
+            <li className="flex gap-3"><MessageCircle size={16} className="mt-0.5 shrink-0 text-[var(--gold)]" /> <a href="https://wa.me/447570108883" target="_blank" rel="noopener" className="hover:text-[var(--gold)]">WhatsApp: +44 7570 108883</a></li>
           </ul>
         </div>
       </div>

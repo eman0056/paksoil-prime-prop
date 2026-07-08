@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { MapPin, BedDouble, Bath, Maximize, Tag, CheckCircle2, Phone, Send } from "lucide-react";
+import { MapPin, BedDouble, Bath, Maximize, Tag, CheckCircle2, Phone, Send, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { PropertyCard } from "@/components/site/PropertyCard";
 import { properties } from "@/data/properties";
@@ -138,8 +138,8 @@ function PropertyDetail() {
               <a href="tel:+923227864673" className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-xs font-semibold text-foreground hover:bg-muted">
                 <Phone size={14} /> Call
               </a>
-              <a href="tel:+923217864673" className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-xs font-semibold text-foreground hover:bg-muted">
-                <Phone size={14} /> Call Alternate
+              <a href="https://wa.me/447570108883" target="_blank" rel="noopener" className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-xs font-semibold text-foreground hover:bg-muted">
+                <MessageCircle size={14} /> WhatsApp
               </a>
             </div>
           </aside>

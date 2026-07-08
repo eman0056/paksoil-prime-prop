@@ -44,11 +44,13 @@ export function PropertyCard({ p }: { p: Property }) {
             View Details
           </Link>
           <a
-            href="tel:+923227864673"
+            href="https://wa.me/447570108883"
+            target="_blank"
+            rel="noopener"
             className="grid h-10 w-11 place-items-center rounded-md bg-[oklch(0.65_0.16_150)] text-white transition hover:opacity-90"
-            aria-label="Call"
+            aria-label="WhatsApp"
           >
-            <Phone size={16} />
+            <MessageCircle size={16} />
           </a>
         </div>
       </div>

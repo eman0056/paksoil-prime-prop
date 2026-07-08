@@ -77,6 +77,7 @@ function ContactPage() {
               { i: MapPin, l: "Office Address", v: "Office No. #223, 3rd Floor, M Dubai Tower, Khanna Bridge, Lehtrar Road, Islamabad, Pakistan" },
               { i: Phone, l: "Phone", v: "+92 322 7864673", href: "tel:+923227864673" },
               { i: Phone, l: "Phone", v: "+92 321 7864673", href: "tel:+923217864673" },
+              { i: MessageCircle, l: "WhatsApp (UK)", v: "+44 7570 108883", href: "https://wa.me/447570108883" },
             ].map((c) => (
               <div key={c.v} className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)]">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
